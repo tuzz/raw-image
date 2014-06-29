@@ -35,3 +35,16 @@ A helper for manipulating raw image data and rendering it to a canvas.
 ```
 
 If you change the image, you'll need to re-render it.
+
+
+## Dimensions
+
+You can change the dimensions of the image by passing a width and/or a height:
+
+```javascript
+new RawImage("image.png", { width: 100, height: 100 });
+```
+
+The aspect ratio of the image is preserved and the image will not exceed 100x100.
+
+The get and set methods will respect the new image dimensions.

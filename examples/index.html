@@ -13,7 +13,11 @@
     <canvas id="canvas"></canvas>
 
     <script>
-      var image = new RawImage("France.svg");
+      var image = new RawImage("France.svg", {
+        width: 750,
+        height: 750
+      });
+
       var black = { red: 0, green: 0, blue: 0, alpha: 255 };
 
       image.onload = function () {
