@@ -1,4 +1,4 @@
-## rawImage.js
+## raw-image
 
 A helper for manipulating raw image data and rendering it to a canvas.
 
