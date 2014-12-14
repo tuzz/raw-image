@@ -16,8 +16,10 @@ Require the module.
 var RawImage = require("raw-image");
 ```
 
-Note: RawImage depends on 'document' and the global 'Image' function. These
-are available in a browser context.
+Note: RawImage needs to run a browser context. You can use something like
+[browserify](http://browserify.org/) to bundle RawImage as a dependency. Take a
+look at the example if you need help with this.
+
 
 ## Usage
 
