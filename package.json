@@ -1,0 +1,25 @@
+{
+  "name": "raw-image",
+  "version": "1.0.0",
+  "description": "A helper for manipulating raw image data and rendering it to a canvas.",
+  "author": "Chris Patuzzo <chris@patuzzo.co.uk>",
+  "license": "MIT",
+  "main": "lib/rawImage",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tuzz/raw-image"
+  },
+  "keywords": [
+    "raw",
+    "image",
+    "canvas",
+    "set",
+    "get",
+    "pixel",
+    "color"
+  ],
+  "devDependencies": {
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-jasmine-node": "^0.2.1"
+  }
+}

@@ -1,3 +1,27 @@
+(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+var RawImage = require("../lib/rawImage");
+
+var image = new RawImage("France.svg", {
+  width: 750,
+    height: 750
+});
+
+var black = { red: 0, green: 0, blue: 0, alpha: 255 };
+
+image.onload = function () {
+  for (var x = 0; x < image.width; x++) {
+    for (var y = 0; y < image.height; y++) {
+      if (y % 3 === 0) {
+        image.set(x, y, black);
+      }
+    }
+  }
+
+  var canvas = document.getElementById("canvas");
+  image.render(canvas);
+};
+
+},{"../lib/rawImage":2}],2:[function(require,module,exports){
 "use strict";
 
 module.exports = function (src, options) {
@@ -91,3 +115,5 @@ module.exports = function (src, options) {
     self.height = image.height = Math.floor(image.height * scale);
   };
 };
+
+},{}]},{},[1]);

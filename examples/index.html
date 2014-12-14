@@ -1,37 +1,12 @@
 <!doctype html>
 <html>
   <head>
-    <script src="../lib/rawImage.js"></script>
   </head>
-
   <body>
     <h1>Scanlines</h1>
-
     <p>To run this example, run python -m SimpleHTTPServer from the root of the
     project, then visit localhost:8000/examples</p>
-
     <canvas id="canvas"></canvas>
-
-    <script>
-      var image = new RawImage("France.svg", {
-        width: 750,
-        height: 750
-      });
-
-      var black = { red: 0, green: 0, blue: 0, alpha: 255 };
-
-      image.onload = function () {
-        for (var x = 0; x < image.width; x++) {
-          for (var y = 0; y < image.height; y++) {
-            if (y % 3 === 0) {
-              image.set(x, y, black);
-            }
-          }
-        }
-
-        var canvas = document.getElementById("canvas");
-        image.render(canvas);
-      };
-    </script>
+    <script src="bundle.js"></script>
   </body>
 </html>
