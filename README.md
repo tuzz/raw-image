@@ -68,3 +68,13 @@ The aspect ratio of the image is preserved and the image will not exceed
 100x100.
 
 The get and set methods will respect the new image dimensions.
+
+## Screenshot
+
+![Screenshot](examples/screenshot.png)
+
+## Contribution
+
+Please send a pull request or open an issue.
+
+You should follow me on [twitter](https://twitter.com/cpatuzzo).
