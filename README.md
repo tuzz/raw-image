@@ -69,9 +69,25 @@ The aspect ratio of the image is preserved and the image will not exceed
 
 The get and set methods will respect the new image dimensions.
 
+## Serialization
+
+Once the image has loaded, you can serialize your image to json:
+
+```javascript
+var image = new RawImage("image.png");
+var json;
+
+image.onload = function () {
+  json = JSON.stringify(image);
+};
+
+var clone = RawImage.fromJson(json);
+clone.get(50, 50);
+```
+
 ## Screenshot
 
-![Screenshot](examples/screenshot.png)
+![Screenshot](examples/scanlines/screenshot.png)
 
 ## Contribution
 

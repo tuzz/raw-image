@@ -1,11 +1,11 @@
 // This file is used to generate bundle.js
-// browserify examples/main.js > examples/bundle.js
+// browserify examples/scanlines/main.js > examples/scanlines/bundle.js
 
-var RawImage = require("../lib/rawImage");
+var RawImage = require("../../lib/rawImage");
 
 var image = new RawImage("France.svg", {
   width: 750,
-    height: 750
+  height: 750
 });
 
 var black = { red: 0, green: 0, blue: 0, alpha: 255 };

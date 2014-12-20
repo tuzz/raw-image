@@ -64,4 +64,15 @@ describe("RawImage", function () {
       ]);
     });
   });
+
+  describe("serialization", function () {
+    it("serializes to and from json", function () {
+      subject.set(0, 0, helpers.blue);
+
+      var json = subject.toJson();
+      var clone = RawImage.fromJson(json);
+
+      expect(clone.get(0, 0)).toEqual(helpers.blue);
+    });
+  });
 });
